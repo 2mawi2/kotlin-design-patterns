@@ -8,10 +8,8 @@ internal interface Graphic {
 
 internal class CompositeGraphic : Graphic {
     private val childGraphics = ArrayList<Graphic>()
-
     override fun print() = childGraphics.forEach { it.print() }
     override fun getAll(): List<Graphic> = childGraphics.flatMap { it.getAll() }
-
     fun add(graphic: Graphic) = childGraphics.add(graphic)
     fun remove(graphic: Graphic) = childGraphics.remove(graphic)
 }

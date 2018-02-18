@@ -1,6 +1,5 @@
 package creational
 
-
 class Factory {
     enum class CarType {
         MERCEDES,

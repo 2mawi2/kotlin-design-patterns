@@ -6,7 +6,9 @@ interface Temperature {
 
 open class CelsiusTemperature(override var temperature: Double) : Temperature
 
-class FahrenheitObjectAdapter(private val celsiusTemperature: CelsiusTemperature) : Temperature {
+class FahrenheitObjectAdapter(
+        private val celsiusTemperature: CelsiusTemperature
+) : Temperature {
     override var temperature: Double
         get() = convertCelsiusToFahrenheit(celsiusTemperature.temperature)
         set(temperatureInF) {
@@ -17,7 +19,9 @@ class FahrenheitObjectAdapter(private val celsiusTemperature: CelsiusTemperature
     private fun convertCelsiusToFahrenheit(c: Double): Double = (c * 9 / 5) + 32
 }
 
-class FahrenheitClassAdapter(celsiusTemperature: CelsiusTemperature) : CelsiusTemperature(celsiusTemperature.temperature) {
+class FahrenheitClassAdapter(
+        celsiusTemperature: CelsiusTemperature
+) : CelsiusTemperature(celsiusTemperature.temperature) {
 
     private var _temperature: Double = celsiusTemperature.temperature
     override var temperature: Double
