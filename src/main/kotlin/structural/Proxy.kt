@@ -26,7 +26,7 @@ class Logger : ILogger {
  */
 class ApiProxy(
         private val realApi: IApi = Api(),
-        private val logger: ILogger = Logger()) : IApi by realApi {
+        private val logger: ILogger = Logger()) : IApi by realApi { //Kotlin keyword by
 
     override fun getElementById(id: Int): Element {
         logger.log("getElementById called")
