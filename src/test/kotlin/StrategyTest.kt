@@ -1,5 +1,5 @@
-import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Test
+import org.testng.Assert.*
+import org.testng.annotations.Test
 
 class StrategyTest {
     @Test
@@ -8,7 +8,7 @@ class StrategyTest {
 
         val result = printer.print("LOWER CASE")
 
-        Assertions.assertEquals("lower case", result)
+        assertEquals("lower case", result)
     }
 
     @Test
@@ -17,6 +17,6 @@ class StrategyTest {
 
         val result = printer.print("lower case")
 
-        Assertions.assertEquals("LOWER CASE", result)
+        assertEquals("LOWER CASE", result)
     }
 }

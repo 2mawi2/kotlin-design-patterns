@@ -1,11 +1,11 @@
-import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Test
+import org.testng.Assert.*
+import org.testng.annotations.Test
 
 class SingletonTest {
     @Test
     fun singletonTest() {
         val result = Singleton.doSth()
 
-        Assertions.assertEquals("someThing", result)
+        assertEquals("someThing", result)
     }
 }

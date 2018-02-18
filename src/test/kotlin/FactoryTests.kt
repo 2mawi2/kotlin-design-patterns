@@ -1,5 +1,5 @@
-import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Test
+import org.testng.Assert.assertEquals
+import org.testng.annotations.Test
 
 class FactoryTests {
     @Test
@@ -7,7 +7,6 @@ class FactoryTests {
         val mercedesFactory = MercedesFactory()
 
         val result = mercedesFactory.create().getType()
-
-        Assertions.assertEquals("Mercedes", result)
+        assertEquals("Mercedes", result)
     }
 }
