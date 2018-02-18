@@ -1,3 +1,5 @@
+package structural
+
 class Element(var name: String = "default")
 interface IApi {
     fun getElementById(id: Int): Element
@@ -18,7 +20,7 @@ class Logger : ILogger {
 }
 
 /**
- * "by" delegates all methodCalls from IApi to realApi
+ * "by" delegates all methodCalls from structural.IApi to realApi
  * Use of the proxy can simply be forwarding to the real object, or can provide additional logic.
  * for example caching or logging
  */

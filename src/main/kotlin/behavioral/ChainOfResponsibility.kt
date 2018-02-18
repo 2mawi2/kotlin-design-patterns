@@ -1,3 +1,5 @@
+package behavioral
+
 class HttpRequest(val accept: String, val length: Int)
 
 class HttpResponse(var content: String, val statusCode: Int)

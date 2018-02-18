@@ -1,3 +1,5 @@
+package structural
+
 interface Temperature {
     var temperature: Double
 }

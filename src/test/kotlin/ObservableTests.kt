@@ -1,3 +1,5 @@
+import behavioral.Observable
+import behavioral.Observer
 import org.testng.annotations.Test
 
 class ObservableTests {

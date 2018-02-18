@@ -1,3 +1,5 @@
+package behavioral
+
 interface IObservable {
     fun register(observer: IObserver): Boolean
     fun unRegister(observer: IObserver): Boolean

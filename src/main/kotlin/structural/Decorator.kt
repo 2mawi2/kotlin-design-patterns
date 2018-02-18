@@ -1,3 +1,5 @@
+package structural
+
 enum class CoffeeType { LARGE, SMALL }
 class Coffee(var milk: Boolean = false, var type: CoffeeType)
 

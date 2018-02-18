@@ -1,5 +1,7 @@
 import org.testng.Assert.*
 import org.testng.annotations.Test
+import structural.Api
+import structural.ApiProxy
 
 class ProxyTests {
     @Test

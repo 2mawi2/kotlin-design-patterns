@@ -1,3 +1,4 @@
+import creational.Singleton
 import org.testng.Assert.*
 import org.testng.annotations.Test
 

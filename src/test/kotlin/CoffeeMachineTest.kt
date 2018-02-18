@@ -1,4 +1,5 @@
 import org.testng.annotations.Test
+import structural.CoffeeMachine
 
 internal class DecoratorTests {
 

@@ -1,3 +1,5 @@
+package creational
+
 interface CarFactory {
     fun create(): Car
 }
@@ -19,13 +21,13 @@ interface Car {
 }
 
 class Mercedes : Car {
-    override fun getType(): String = "Mercedes"
+    override fun getType(): String = "creational.Mercedes"
 }
 
 class Renault : Car {
-    override fun getType(): String = "Renault"
+    override fun getType(): String = "creational.Renault"
 }
 
 class Peogeot : Car {
-    override fun getType(): String = "Peogeot"
+    override fun getType(): String = "creational.Peogeot"
 }

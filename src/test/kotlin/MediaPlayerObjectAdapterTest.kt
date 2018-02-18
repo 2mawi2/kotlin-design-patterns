@@ -1,5 +1,8 @@
 import org.testng.Assert.assertNotEquals
 import org.testng.annotations.Test
+import structural.CelsiusTemperature
+import structural.FahrenheitClassAdapter
+import structural.FahrenheitObjectAdapter
 
 internal class MediaPlayerObjectAdapterTest {
     @Test
