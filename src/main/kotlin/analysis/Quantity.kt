@@ -6,7 +6,7 @@ enum class Scale {
     FAHRENHEIT
 }
 
-class Temperature(val amount: Float, private val scale: Scale) {
+class Temperature(val amount: Float, val scale: Scale) {
     private fun convert(destinationScale: Scale): Temperature {
         val converted = TempConverter.parse(this.scale, destinationScale, amount)
         return Temperature(converted, destinationScale)

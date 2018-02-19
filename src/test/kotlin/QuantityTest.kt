@@ -11,9 +11,10 @@ class QuantityTest {
     }
 
     @Test
-    fun `should add Celsius with Fahrenheit`() {
+    fun `should add Celsius and Fahrenheit`() {
         val result = Temperature(10.0f, Scale.CELSIUS) + Temperature(122.0f, Scale.FAHRENHEIT)
         assertEquals(result.amount, 60.0f)
+        assertEquals(result.scale, Scale.CELSIUS)
     }
 
     @Test
