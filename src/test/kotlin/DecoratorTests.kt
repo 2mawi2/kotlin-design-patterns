@@ -1,15 +1,12 @@
 import org.testng.annotations.Test
-import structural.AnotherComponentDecorator
 
 
 class DecoratorTests {
     @Test
     fun `Decorator pattern should work`() {
-        val component: IComponent = ConcreteComponent().apply {
-            name = "component 1"
-        }
+        val component: IComponent = ConcreteComponent()
         val decoratedComponent = ComponentDecorator(component)
-        val anotherDecoratedComponent = AnotherComponentDecorator(ComponentDecorator(component))
+        val anotherDecoratedComponent = AnotherDecoratedComponent(ComponentDecorator(component))
 
         component.operate()
 
@@ -18,7 +15,6 @@ class DecoratorTests {
 
         anotherDecoratedComponent.operate()
 
-        anotherDecoratedComponent.isNameToBeChanged = false
         anotherDecoratedComponent.operate()
 
         /**

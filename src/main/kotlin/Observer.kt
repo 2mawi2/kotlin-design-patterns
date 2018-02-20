@@ -1,20 +1,14 @@
-interface IObservable {
-    fun register(observer: IObserver): Boolean
-    fun unRegister(observer: IObserver): Boolean
-    fun notifyObservers()
-}
-
-class Observable : IObservable {
+class Observable {
     private var observables = ArrayList<IObserver>()
-    override fun register(observer: IObserver) = observables.add(observer)
-    override fun unRegister(observer: IObserver) = observables.removeIf { it == observer }
+    fun register(observer: IObserver) = observables.add(observer)
+    fun unRegister(observer: IObserver) = observables.removeIf { it == observer }
 
-    fun doSth() {
-        print("this is doing sth else")
+    fun onEvent() {
+        print("event handled")
         notifyObservers()
     }
 
-    override fun notifyObservers() = observables.forEach { it.update() }
+    private fun notifyObservers() = observables.forEach { it.update() }
 }
 
 
@@ -23,5 +17,5 @@ interface IObserver {
 }
 
 class Observer : IObserver {
-    override fun update() = print("registred")
+    override fun update() = print("Observer got updated")
 }

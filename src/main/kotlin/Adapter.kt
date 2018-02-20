@@ -1,33 +1,18 @@
-interface Temp {
-    var temperature: Double
+internal interface IService { // target signature
+    fun operation(): String
 }
 
-open class CelsiusTemperature(override var temperature: Double) : Temp
-
-class FahrenheitObjectAdapter(
-        private val celsiusTemperature: CelsiusTemperature
-) : Temp {
-    override var temperature: Double
-        get() = convertCelsiusToFahrenheit(celsiusTemperature.temperature)
-        set(temperatureInF) {
-            celsiusTemperature.temperature = convertFahrenheitToCelsius(temperatureInF)
-        }
-
-    private fun convertFahrenheitToCelsius(f: Double): Double = (f - 32) * 5 / 9
-    private fun convertCelsiusToFahrenheit(c: Double): Double = (c * 9 / 5) + 32
+internal class Service { // Service to wrap
+    fun complicatedLongOperationWhichShouldBeWrapped(): String {
+        return "this is a complicatedLongOperationWhichShouldBeWrapped"
+    }
 }
 
-class FahrenheitClassAdapter(
-        celsiusTemperature: CelsiusTemperature
-) : CelsiusTemperature(celsiusTemperature.temperature) {
+class ServiceAdapter : IService { //Wrapper
+    private val service = Service()
 
-    private var _temperature: Double = celsiusTemperature.temperature
-    override var temperature: Double
-        get() = convertCelsiusToFahrenheit(_temperature)
-        set(temperatureInF) {
-            _temperature = convertFahrenheitToCelsius(temperatureInF)
-        }
-
-    private fun convertFahrenheitToCelsius(f: Double): Double = (f - 32) * 5 / 9
-    private fun convertCelsiusToFahrenheit(c: Double): Double = (c * 9 / 5) + 32
+    override fun operation(): String {
+        return service.complicatedLongOperationWhichShouldBeWrapped()
+    }
 }
+

@@ -8,7 +8,7 @@ class ObservableTests {
 
         observable.register(observer)
 
-        observable.doSth()
+        observable.onEvent()
     }
 }
 
