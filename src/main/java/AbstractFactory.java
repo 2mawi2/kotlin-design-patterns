@@ -1,6 +1,3 @@
-package Decorator;
-
-
 interface Factory {
     abstract ICar create();
 }

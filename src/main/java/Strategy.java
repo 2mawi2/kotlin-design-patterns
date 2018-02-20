@@ -1,5 +1,3 @@
-package Decorator;
-
 class PaymentTransaction {
 
     private IPaymentStrategy paymentStrategy;
@@ -17,21 +15,21 @@ interface IPaymentStrategy {
     public void pay();
 }
 
-class PaypalPaymentStrategy implements Decorator.IPaymentStrategy {
+class PaypalPaymentStrategy implements IPaymentStrategy {
     @Override
     public void pay() {
         System.out.println("payed with paypal");
     }
 }
 
-class DirectDebitPaymentStrategy implements Decorator.IPaymentStrategy {
+class DirectDebitPaymentStrategy implements IPaymentStrategy {
     @Override
     public void pay() {
         System.out.println("payed with DirectDebit");
     }
 }
 
-class CreditCardStrategy implements Decorator.IPaymentStrategy {
+class CreditCardStrategy implements IPaymentStrategy {
     @Override
     public void pay() {
         System.out.println("payed with CreditCard");

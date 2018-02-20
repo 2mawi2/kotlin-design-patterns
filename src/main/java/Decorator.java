@@ -1,5 +1,3 @@
-package Decorator;
-
 interface IComponent {
     public void operate();
 }

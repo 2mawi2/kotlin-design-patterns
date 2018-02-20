@@ -1,8 +1,6 @@
-package Decorator;
-
 class Client {
     public void test() {
-        useTarget(new Decorator.ServiceAdapter());
+        useTarget(new ServiceAdapter());
     }
 
     private void useTarget(ITarget target) {

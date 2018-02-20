@@ -1,5 +1,3 @@
-package Decorator;
-
 import kotlin.NotImplementedError;
 
 interface ICar {

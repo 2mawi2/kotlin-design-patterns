@@ -1,5 +1,3 @@
-package Decorator;
-
 import java.util.ArrayList;
 
 interface IObserver {

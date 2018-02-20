@@ -1,5 +1,3 @@
-package Decorator;
-
 class Element {
     private String name;
 

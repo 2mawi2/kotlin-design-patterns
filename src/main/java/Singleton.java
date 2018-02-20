@@ -1,5 +1,3 @@
-package Decorator;
-
 public class Singleton {
 
     private static Singleton instance;
