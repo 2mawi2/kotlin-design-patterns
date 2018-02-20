@@ -4,7 +4,7 @@ import structural.CelsiusTemperature
 import structural.FahrenheitClassAdapter
 import structural.FahrenheitObjectAdapter
 
-internal class MediaPlayerObjectAdapterTest {
+internal class MediaPlayerObjectAdapterTests {
     @Test
     fun `FahrenheitObjectAdapter should parse to fahrenheit`() {
         val celsiusTemperature = CelsiusTemperature(30.0)

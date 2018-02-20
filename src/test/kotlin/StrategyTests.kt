@@ -4,7 +4,7 @@ import behavioral.upperCasePrintStrategy
 import org.testng.Assert.*
 import org.testng.annotations.Test
 
-class StrategyTest {
+class StrategyTests {
     @Test
     fun `StrategyTest lowerCasePrintStrategy`() {
         val printer = Printer(lowerCasePrintStrategy)

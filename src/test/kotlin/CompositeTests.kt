@@ -4,7 +4,7 @@ import structural.CompositeGraphic
 import structural.Ellipse
 
 
-class CompositeTest {
+class CompositeTests {
     @Test
     fun `Remove works`() {
         val graphicChild1 = CompositeGraphic()

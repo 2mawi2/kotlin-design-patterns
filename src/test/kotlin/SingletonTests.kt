@@ -2,7 +2,7 @@ import creational.Singleton
 import org.testng.Assert.*
 import org.testng.annotations.Test
 
-class SingletonTest {
+class SingletonTests {
     @Test
     fun singletonTest() {
         val result = Singleton.doSth()

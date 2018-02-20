@@ -3,7 +3,7 @@ import analysis.Temperature
 import org.testng.Assert.*
 import org.testng.annotations.Test
 
-class QuantityTest {
+class QuantityTests {
     @Test
     fun `should init correctly`() {
         val result = Temperature(10.0f, Scale.CELSIUS).amount
