@@ -1,3 +1,6 @@
+package alt;
+
+
 interface Factory {
     abstract ICar create();
 }

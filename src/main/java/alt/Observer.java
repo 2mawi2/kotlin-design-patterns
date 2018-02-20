@@ -1,3 +1,5 @@
+package alt;
+
 import java.util.ArrayList;
 
 interface IObserver {

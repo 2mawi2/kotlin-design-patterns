@@ -1,6 +1,8 @@
+package alt;
+
 class Client {
     public void test() {
-        useTarget(new ServiceAdapter());
+        useTarget(new Decorator.ServiceAdapter());
     }
 
     private void useTarget(ITarget target) {

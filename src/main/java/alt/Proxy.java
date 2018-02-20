@@ -1,3 +1,5 @@
+package alt;
+
 class Element {
     private String name;
 

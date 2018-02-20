@@ -1,3 +1,5 @@
+package alt;
+
 interface IComponent {
     public void operate();
 }

@@ -1,3 +1,5 @@
+package alt;
+
 import kotlin.NotImplementedError;
 
 interface ICar {
