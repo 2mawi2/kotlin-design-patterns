@@ -1,5 +1,3 @@
-package analysis
-
 enum class Scale {
     CELSIUS,
     KELVIN,

@@ -1,14 +1,12 @@
-package structural
-
-interface Temperature {
+interface Temp {
     var temperature: Double
 }
 
-open class CelsiusTemperature(override var temperature: Double) : Temperature
+open class CelsiusTemperature(override var temperature: Double) : Temp
 
 class FahrenheitObjectAdapter(
         private val celsiusTemperature: CelsiusTemperature
-) : Temperature {
+) : Temp {
     override var temperature: Double
         get() = convertCelsiusToFahrenheit(celsiusTemperature.temperature)
         set(temperatureInF) {

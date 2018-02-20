@@ -1,5 +1,3 @@
-package creational
-
 interface CarFactory {
     fun create(): Car
 }

@@ -1,7 +1,5 @@
 import org.testng.Assert.assertEquals
 import org.testng.annotations.Test
-import structural.CompositeGraphic
-import structural.Ellipse
 
 
 class CompositeTests {

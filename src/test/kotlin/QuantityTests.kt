@@ -1,5 +1,3 @@
-import analysis.Scale
-import analysis.Temperature
 import org.testng.Assert.*
 import org.testng.annotations.Test
 

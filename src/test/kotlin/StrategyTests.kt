@@ -1,6 +1,3 @@
-import behavioral.Printer
-import behavioral.lowerCasePrintStrategy
-import behavioral.upperCasePrintStrategy
 import org.testng.Assert.*
 import org.testng.annotations.Test
 
